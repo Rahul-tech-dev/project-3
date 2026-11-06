@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --page: #171a17;
+    --ink: #292216;
+    --cream: #ded1bb;
+    --olive: #92906c;
+    --terracotta: #a36f55;
+    --sand: #b7a187;
+    --line: rgba(42, 35, 25, .30);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: #20231f;
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+.site-shell {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    padding: 12px;
+    background: var(--page);
+}
+
+/* NAVBAR */
+
+.navbar {
+    min-height: 43px;
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) auto minmax(150px, 1fr);
+    align-items: center;
+    gap: 10px;
+    padding: 3px;
+    margin-bottom: 8px;
+    border: 1px solid #777765;
+    border-radius: 30px;
+    color: #e5dfd1;
+}
+
+.navbar a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 11px;
+    text-align: center;
+    border: 1px solid #777765;
+    border-radius: 24px;
+    padding: 11px 22px;
+    white-space: nowrap;
+}
+
+.navbar .brand {
+    justify-self: stretch;
+    background: #303024;
+    border-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 4px;
+}
+
+.nav-links a {
+    min-width: 112px;
+}
+
+.navbar .contact-link {
+    justify-self: end;
+    min-width: 125px;
+}
+
+/* MAIN GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 2.08fr;
+    gap: 8px;
+    width: 100%;
+    min-height: calc(100vh - 85px);
+}
+
+.card {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--ink);
+}
+
+/* BIRMINGHAM CARD */
+
+.city-card {
+    background: var(--cream);
+}
+
+.card-content {
+    padding: 21px 11px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 1.15;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+h1,
+h2,
+p,
+a,
+span,
+strong {
+    font-family: 'Inter', sans-serif;
+}
+
+.city-card h1 {
+    margin: 18px 11px 20px;
+    font-size: clamp(22px, 2vw, 26px);
+    line-height: 1.2;
+}
+
+.city-image {
+    display: block;
+    width: 100%;
+    height: 432px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* CARD FOOTER */
+
+.card-footer {
+    min-height: 48px;
+    padding: 0 22px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.card-footer span:last-child {
+    font-size: 19px;
+    line-height: 1;
+}
+
+/* RIGHT COLUMN */
+
+.right-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 7px;
+    min-height: 0;
+}
+
+/* BREAD CARD */
+
+.bread-card {
+    background: var(--olive);
+}
+
+.bread-main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 22px 22px 14px;
+}
+
+.bread-copy h2,
+.vintage-main h2 {
+    margin: 19px 0 20px;
+    font-size: clamp(21px, 2vw, 25px);
+    line-height: 1.2;
+}
+
+.bread-copy p,
+.portrait-main p,
+.vintage-main p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+.bread-main > img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* BOTTOM GRID */
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    min-height: 0;
+}
+
+/* PORTRAIT CARD */
+
+.portrait-card {
+    background: var(--terracotta);
+}
+
+.portrait-main {
+    padding: 11px;
+    flex: 1;
+}
+
+.portrait-main > img {
+    display: block;
+    width: 100%;
+    height: 126px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.portrait-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 13px 0 16px;
+}
+
+.portrait-heading h2 {
+    margin: 0;
+    font-size: clamp(34px, 4vw, 43px);
+}
+
+.three-dots {
+    font-size: 22px;
+    letter-spacing: -4px;
+    white-space: nowrap;
+}
+
+.portrait-main p {
+    padding: 0 11px;
+}
+
+/* VINTAGE CARD */
+
+.vintage-card {
+    background: var(--sand);
+}
+
+.vintage-main {
+    padding: 21px 22px 12px;
+    flex: 1;
+}
+
+.vintage-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.vintage-top img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.vintage-main h2 {
+    margin-top: 38px;
+    margin-bottom: 20px;
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--ink);
+    border-bottom: 5px double var(--ink);
+    margin-top: 35px;
+    padding: 8px 0;
+    font-size: 10px;
+}
+
+.meta-row strong {
+    font-weight: 700;
+}
+
+/* TABLET AND MOBILE RESPONSIVENESS */
+
+@media (max-width: 760px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .site-shell {
+        padding: 6px;
+    }
+
+    .navbar {
+        grid-template-columns: 1fr auto;
+        border-radius: 20px;
+        padding: 6px;
+    }
+
+    .navbar .brand {
+        text-align: left;
+    }
+
+    .nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+    }
+
+    .nav-links a {
+        flex: 1;
+        min-width: max-content;
+        padding: 9px 15px;
+    }
+
+    .navbar .contact-link {
+        grid-column: 2;
+        grid-row: 1;
+        min-width: 0;
+        padding: 10px 15px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .city-image {
+        height: clamp(280px, 75vw, 440px);
+    }
+
+    .right-column {
+        grid-template-rows: auto auto;
+    }
+
+    .bread-main {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .bread-main > img {
+        height: clamp(160px, 45vw, 240px);
+        grid-row: 1;
+    }
+
+    .bread-copy h2 {
+        margin: 12px 0;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portrait-main > img {
+        height: clamp(115px, 27vw, 180px);
+    }
+
+    .portrait-heading h2 {
+        font-size: clamp(28px, 7vw, 40px);
+    }
+
+    .vintage-main {
+        padding: 17px;
+    }
+
+    .vintage-main h2 {
+        margin-top: 28px;
+    }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 7px;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portrait-main > img {
+        height: 190px;
+    }
+
+    .portrait-main p,
+    .bread-copy p,
+    .vintage-main p {
+        font-size: 11px;
+    }
+
+    .city-card h1,
+    .bread-copy h2,
+    .vintage-main h2 {
+        font-size: 24px;
+    }
+
+    .card-footer {
+        min-height: 44px;
+    }
+}
+
+
+/* BUTTON HOVER ANIMATION */
+
+.card-footer,
+.navbar a {
+    transition: all 0.3s ease;
+}
+
+/* GET STARTED BUTTONS */
+
+.card-footer {
+    cursor: pointer;
+}
+
+.card-footer:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.02);
+}
+
+/* NAVBAR BUTTONS */
+
+.navbar a:hover {
+    background-color: #777765;
+    color: #ffffff;
+    transform: scale(1.04);
+}
+
+/* CONTACT BUTTON */
+
+.contact-link:hover {
+    background-color: #b7a187;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .card-footer,
+    .navbar a {
+        transition: none;
+    }
+}
